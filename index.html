@@ -5,8 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+        </div>
+        <h1>LISTA DE TAREFAS</h1>
+        <h2>Insira o texto no campo de entrada para adicional itens à sua lista</h2>
+        <h3>Clique no item para marcá-lo como atividade concluída</h3>
+        <p>Clique no "X" para remover o item da sua lista</p>
+    </div>
+    <div>
+<!-- placeholder é um atributo. Tem o intuito de ajudar usuários a entender como devem preencher determinado formulário, 
+inserindo um texto no campo a ser respondido.
+Maxlenght é o tamanho máximo de caracteres que são aceitos como entrada -->
+        <input id="userInput" type="text" placeholder="Nova Tarefa..." maxlength="30"> 
+        <button id="enter"><i class="""><img src="img/pencil.png"></i></button>
+    </div>
+<!-- Empy List-->
+
+<div>
+    <ul id="lista"></ul>
+</div>
     <script src="main.js"></script>
 </body>
 </html>
