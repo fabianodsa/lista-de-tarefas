@@ -7,25 +7,27 @@
     <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-        </div>
-        <h1>LISTA DE TAREFAS</h1>
-        <h2>Insira o texto no campo de entrada para adicional itens à sua lista</h2>
-        <h3>Clique no item para marcá-lo como atividade concluída</h3>
-        <p>Clique no "X" para remover o item da sua lista</p>
-    </div>
-    <div>
-<!-- placeholder é um atributo. Tem o intuito de ajudar usuários a entender como devem preencher determinado formulário, 
-inserindo um texto no campo a ser respondido.
-Maxlenght é o tamanho máximo de caracteres que são aceitos como entrada -->
-        <input id="userInput" type="text" placeholder="Nova Tarefa..." maxlength="30"> 
-        <button id="enter"><i class="""><img src="img/pencil.png"></i></button>
-    </div>
-<!-- Empy List-->
+    <body>
+            <div>
+                <h1>Lista de Tarefas</h1>
+            </div>
 
-<div>
-    <ul id="lista"></ul>
-</div>
-    <script src="main.js"></script>
-</body>
+            <div>
+                <p id="first">Insira texto no campo de entrada para adicionar itens à sua lista.</p>
+                <p id="second">Clique no item para marcá-lo como atividade concluída.</p>
+                <p id="third">Clique no "X" para remover o item da sua lista.</p>
+            </div>
+
+            <div>
+                <input id="userInput" type="text" placeholder="Nova Tarefa..." maxlength="27">
+                <button id="enter"><i class=""><img src="img/pencil.png"></i></button>
+            </div>
+
+            <div>
+                <ul id="ul">
+                </ul>
+            </div>
+
+        <script src="main.js"></script>
+    </body>
 </html>

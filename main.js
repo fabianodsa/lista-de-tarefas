@@ -1,56 +1,46 @@
-var botaoEnter = document.getElementById("enter");
-var entradaDados = document.getElementById("userInput");
-var lista = document.getElementById("lista");
-var item = document.getElementsByTagName("li")
+var enterButton = document.getElementById("enter");
+var input = document.getElementById("userInput");
+var ul = document.getElementById("ul");
+var item = document.getElementsByTagName("li");
 
-// Essa função controla o número de caracteres dentro do input, para evitar que o usuário não digite nada e,
-// mesmo assim, crie um elemento
-
-function entradaDados() {
+function inputLength(){
     return input.value.length;
 }
 
-// createElement: Cria um elemento HTML para ser, posteriormente, inserido em um documento HTML
+function createListElement(){
+    var li = document.createElement("li");
 
-function criaElemento () {
-    var li = document.createElement("li"); 
-    // appendChild vai pegar o elemento pai (li) e vai colocar dentro dele o valor da entradaDados en formato de texto
-    li.appendChild(document.createTextNode("input.value"))
-    // adicionando a li dentro do elemento pai ul que está fazia
+    li.appendChild(document.createTextNode(input.value));
     ul.appendChild(li);
-    input.value = ""; // resetar o texto da entradaDados após apertar enter ou no lápis
+    input.value = "";
 
-    // o classList vai acessar a class e quando se usa o toggle, ele verifica o argumento e vê se ele está presente.
-    // se a classe existir: ele remove ela
-    // se a classe não existir: ele cria ela 
-
-    function mudarCor () {
-        li.classList.toggle("done"); // evento de clique
+    function crossOut(){
+        li.classList.toggle("done");
     }
 
-    li.addEventListener("click", mudarCor)
+    li.addEventListener("click",crossOut);
 
-    var botaoDeletar = document.createElement("button");
-    botaoDeletar.appendChild(document.createTextNode("X"));
-    li.appendChild(botaoDeletar);
-    botaoDeletar.addEventListener("click", deletarAtividade);
+    var dBtn = document.createElement("button");
+    dBtn.appendChild(document.createTextNode("X"));
+    li.appendChild(dBtn);
+    dBtn.addEventListener("click", deleteListItem);
 
-    function deletarAtividade () {
+    function deleteListItem(){
         li.classList.add("delete");
     }
 }
 
-botaoEnter.addEventListener("click", adicionarListaAposClique);
-entradaDados.addEventListener("keypress", adicionarListaTeclado);
+enterButton.addEventListener("click",addListAfterClick);
+input.addEventListener("keypress", addListAfterKeypress);
 
-function adicionarListaAposClique () {
-    if (entradaDados() > 0) {
-        criaElemento();
+function addListAfterClick(){
+    if (inputLength() > 0){
+        createListElement();
     }
 }
-
-function adicionarListaTeclado () {
-    if (entradaDados() > 0 && event.keyCode === 13) {// 13 é o código chave da tecla enter
-    criaElemento();
+    
+function addListAfterKeypress(){
+    if(inputLength() > 0 && event.which === 13){
+        createListElement();
     }
 }

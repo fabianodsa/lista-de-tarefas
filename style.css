@@ -25,13 +25,7 @@ h3 , p {
     border-radius: 5px;
     color: #04A1BF;
     background-color: #2bd266;
-    /* transition: all 0.75s ease;
-    -webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    -o-transition: all 0.75 ease;
-    font-weight: normal;
-    display: inline-block; */
+
 }
 
 #enter:hover{
