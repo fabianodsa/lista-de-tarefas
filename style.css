@@ -1,7 +1,25 @@
-body {
-    background:#E6E6FA;
+body, html {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    background-image: url("img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    margin-left: 100px;
+}
+
+.tarefas {
+    margin-left: 60px;
+    margin-right: 139px;
 }
 
 h1 {
@@ -11,7 +29,7 @@ h1 {
 
 h2 {
     font-size: 30px;
-    color: #00891E;
+    color: #02798F;
 }
 
 h3 , p {
@@ -25,7 +43,6 @@ h3 , p {
     border-radius: 5px;
     color: #04A1BF;
     background-color: #2bd266;
-
 }
 
 #enter:hover{
@@ -54,11 +71,6 @@ li {
     border-radius: 5px;
     margin-bottom: 10px;
     background: #4EB9CD;
-    transition: all 0.75s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5 ease;
 }
 
 li:hover {
