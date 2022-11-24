@@ -6,7 +6,7 @@ body, html {
 }
 
 .bg {
-    background-image: url("img/background.png");
+    background-image: url("img/imagem5.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,18 +23,18 @@ body, html {
 }
 
 h1 {
-    color: #02798F;
+    color: #D5D8DC;
     font-size: 50px;
 }
 
 h2 {
     font-size: 30px;
-    color: #02798F;
+    color: #F9E79F;
 }
 
 h3 , p {
     font-size: 20px;
-    color: darkcyan;
+    color: #F9E79F;
 }
 
 #enter {
